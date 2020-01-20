@@ -2,7 +2,7 @@
 
 #include "Entity.h"
 #include "Color.h"
-#include <list>
+#include <vector>
 
 constexpr uint8_t kSnakeW{ 10 }, kSnakeH{ 10 };
 using Point = std::pair<int, int>;
@@ -33,5 +33,5 @@ private:
 	// Color
 	Color m_color;
 
-	std::list<Point> m_snake;
+	std::vector<Point> m_snake;
 }; // struct Snake

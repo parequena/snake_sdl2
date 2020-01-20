@@ -4,6 +4,7 @@
 #include "src/logic/Logic.h"
 #include "src/logic/Color.h"
 #include "src/logic/Ball.h"
+#include "src/logic/Snake.h"
 #include "src/renderThread/RenderThread.h"
 
 // Informe de FPSs
@@ -64,6 +65,16 @@ int main()
 	ball->setPos(568, 216);
 	ball->setSpeed(-200, 200);
 	Logic::AddEntity(ball);
+
+	// Bola 3
+	ball = new Ball(50, 50, 718, 382, Color::GREEN);
+	ball->setPos(600, 250);
+	ball->setSpeed(0, 200);
+	Logic::AddEntity(ball);
+
+	// Snake
+	Snake* snake = new Snake(20, 20, 15, Color::GREEN);
+	Logic::AddEntity(snake);
 
 	Clock chrono;
 
